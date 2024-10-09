@@ -1,0 +1,82 @@
+.navbar {
+  background: linear-gradient(to right, #d6006d, #ff4c4c);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-title {
+  font-family: "Pacifico", cursive;
+  font-size: 24px;
+  color: white;
+  margin-left: 8px;
+}
+
+.navbar-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar-icon {
+  font-size: 24px;
+  color: white; /* Color set to white */
+}
+
+.navbar-menu {
+  display: flex;
+}
+
+.navbar-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: "Lobster", cursive;
+}
+
+.navbar-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar-list {
+    flex-direction: row;
+  }
+
+  .navbar-link {
+    margin-left: 20px;
+  }
+}

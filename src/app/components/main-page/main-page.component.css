@@ -1,0 +1,78 @@
+.main-page {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  background-image: url("../../../assets/main-page-background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Ensure elements stack vertically */
+  align-items: center; /* Center align content */
+}
+
+.overlay {
+  max-width: 70%;
+  padding: 20px;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Optional: white background with opacity */
+  border-radius: 10px; /* Optional: rounded corners */
+  z-index: 10; /* Ensure overlay is on top */
+  text-align: center; /* Center align text */
+}
+
+.flex {
+  margin-top: 20px; /* Spacing between overlay and cards */
+  width: 100%; /* Make sure the cards take the full width */
+  max-width: 600px; /* Optional: limit max width for better layout */
+  display: flex; /* Use Flexbox to align cards side by side */
+  gap: 20px; /* Space between cards */
+}
+
+.birthday-message {
+  font-size: 3rem;
+  color: #ff2b7f; /* A bright pink color */
+  margin-bottom: 10px;
+  font-family: "Pacifico", cursive;
+}
+
+.sub-message {
+  font-size: 1.5rem;
+  color: #555; /* Darker gray for contrast */
+  font-family: "Lobster", cursive;
+}
+
+.cards {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Optional: white background with opacity */
+  border-radius: 10px;
+  max-width: 750px; /* Set max width for cards */
+  flex: 1; /* Allow cards to grow and take available space */
+}
+
+.cards-title {
+  text-align: center;
+  color: #ff2b7f;
+  font-size: 1.5rem;
+  font-family: "Pacifico", cursive;
+}
+
+.cards-sub-message {
+  text-align: center;
+  color: #555;
+  font-size: 1rem;
+  font-family: "Lobster", cursive;
+}
