@@ -1,3 +1,28 @@
+@if (!isBirthday && showCountdown) {
+<div class="countdown-container">
+  <h1 class="countdown-title" style="font-family: 'Lobster', cursive">
+    Countdown to your amazing birthday!
+  </h1>
+  <div id="countdown" class="countdown">
+    <div class="countdown-item">
+      <span class="countdown-number">{{ days }}</span>
+      <span class="countdown-label">Days</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number">{{ hours }}</span>
+      <span class="countdown-label">Hours</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number">{{ minutes }}</span>
+      <span class="countdown-label">Minutes</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number">{{ seconds }}</span>
+      <span class="countdown-label">Seconds</span>
+    </div>
+  </div>
+</div>
+} @else {
 <div class="main-page">
   <div class="background-image">
     <div class="overlay">
@@ -44,3 +69,4 @@
     </div>
   </div>
 </div>
+}

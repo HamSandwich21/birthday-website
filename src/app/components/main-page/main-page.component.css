@@ -2,8 +2,64 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
+.countdown-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #ff7bbd,
+    #ff2b7f
+  ); /* Gradient pink background */
+  z-index: 10;
+  text-align: center;
+  padding: 50px;
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.countdown-title {
+  font-size: 3.5rem;
+  color: #ffffff;
+  font-family: "Pacifico", cursive;
+  margin-bottom: 20px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.countdown-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d5006d;
+}
+
+.countdown-label {
+  font-size: 1rem;
+  color: #8e24aa;
+}
+
+/* Other styles remain the same */
 .background-image {
   background-image: url("../../../assets/main-page-background.jpg");
   background-size: cover;
@@ -12,55 +68,44 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* Ensure elements stack vertically */
-  align-items: center; /* Center align content */
+  flex-direction: column;
 }
 
 .overlay {
   max-width: 70%;
   padding: 20px;
-  background: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Optional: white background with opacity */
-  border-radius: 10px; /* Optional: rounded corners */
-  z-index: 10; /* Ensure overlay is on top */
-  text-align: center; /* Center align text */
-}
-
-.flex {
-  margin-top: 20px; /* Spacing between overlay and cards */
-  width: 100%; /* Make sure the cards take the full width */
-  max-width: 600px; /* Optional: limit max width for better layout */
-  display: flex; /* Use Flexbox to align cards side by side */
-  gap: 20px; /* Space between cards */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  z-index: 10;
+  text-align: center;
 }
 
 .birthday-message {
   font-size: 3rem;
-  color: #ff2b7f; /* A bright pink color */
+  color: #ff2b7f;
   margin-bottom: 10px;
   font-family: "Pacifico", cursive;
 }
 
 .sub-message {
   font-size: 1.5rem;
-  color: #555; /* Darker gray for contrast */
+  color: #555;
   font-family: "Lobster", cursive;
 }
 
+.flex {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  gap: 20px;
+}
+
 .cards {
-  background: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Optional: white background with opacity */
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  max-width: 750px; /* Set max width for cards */
-  flex: 1; /* Allow cards to grow and take available space */
+  max-width: 750px;
+  flex: 1;
 }
 
 .cards-title {
