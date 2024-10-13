@@ -1,0 +1,49 @@
+.gallery-page {
+  position: relative;
+  height: 100vh; /* Fill the viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px; /* Add some padding */
+}
+
+.card-container {
+  display: flex;
+  justify-content: center; /* Center the cards */
+  gap: 100px; /* Increased space between cards */
+  margin-bottom: 100px; /* Increased space between rows */
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9); /* Background color for cards */
+  border-radius: 15px; /* Slightly increased rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+  width: 250px; /* Increased width for each card */
+  height: 300px; /* Increased height for each card */
+  overflow: hidden; /* Ensures the image does not overflow */
+  transition: transform 0.3s; /* Smooth transformation */
+}
+
+.card-image {
+  width: 100%; /* Full width of the card */
+  height: 200px; /* Increased height for images */
+  object-fit: cover; /* Maintain aspect ratio and cover */
+}
+
+.card-title {
+  padding: 15px; /* Increased padding for the title */
+  text-align: center;
+  font-family: "Pacifico", cursive; /* Change font family if needed */
+  font-size: 1.5rem; /* Increased font size for the title */
+  color: #333; /* Card title color */
+}
+
+.mute-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 20;
+  color: white;
+}

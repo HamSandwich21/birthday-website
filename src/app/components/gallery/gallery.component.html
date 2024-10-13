@@ -1,1 +1,80 @@
-<p>gallery works!</p>
+<div class="gallery-page">
+  <div class="card-container">
+    <!-- First Row -->
+    <div class="card" style="transform: rotate(5deg)">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=600&auto=format&fit=crop"
+        alt="Gallery Image 1"
+      />
+      <h5 class="card-title">Gallery Image 1</h5>
+    </div>
+    <div class="card" style="transform: rotate(-10deg)">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=600&auto=format&fit=crop"
+        alt="Gallery Image 2"
+      />
+      <h5 class="card-title">Gallery Image 2</h5>
+    </div>
+    <div class="card" style="transform: rotate(15deg)">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=600&auto=format&fit=crop"
+        alt="Gallery Image 3"
+      />
+      <h5 class="card-title">Gallery Image 3</h5>
+    </div>
+    <div class="card" style="transform: rotate(-5deg)">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=600&auto=format&fit=crop"
+        alt="Gallery Image 4"
+      />
+      <h5 class="card-title">Gallery Image 4</h5>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <!-- Second Row -->
+    <div class="card" style="transform: rotate(20deg)">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=600&auto=format&fit=crop"
+        alt="Gallery Image 5"
+      />
+      <h5 class="card-title">Gallery Image 5</h5>
+    </div>
+    <div class="card" style="transform: rotate(-15deg)">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=600&auto=format&fit=crop"
+        alt="Gallery Image 6"
+      />
+      <h5 class="card-title">Gallery Image 6</h5>
+    </div>
+    <div class="card" style="transform: rotate(10deg)">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=600&auto=format&fit=crop"
+        alt="Gallery Image 7"
+      />
+      <h5 class="card-title">Gallery Image 7</h5>
+    </div>
+    <div class="card" style="transform: rotate(-10deg)">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=600&auto=format&fit=crop"
+        alt="Gallery Image 8"
+      />
+      <h5 class="card-title">Gallery Image 8</h5>
+    </div>
+  </div>
+
+  <button (click)="toggleMute()" class="mute-button">
+    <i
+      [class]="isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up'"
+      style="font-size: 24px"
+    ></i>
+  </button>
+</div>

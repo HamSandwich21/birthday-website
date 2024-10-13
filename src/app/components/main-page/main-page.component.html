@@ -24,7 +24,7 @@
 </div>
 } @else {
 <div class="main-page">
-  <div class="background-image">
+  <div class="positioning">
     <div class="overlay">
       <h1 class="birthday-message">
         🎉 Happy 21st birthday to the best wife on earth 🎉
@@ -67,6 +67,12 @@
         </div>
       </a>
     </div>
+    <button (click)="toggleMute()" class="mute-button">
+      <i
+        [class]="isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up'"
+        style="font-size: 24px"
+      ></i>
+    </button>
   </div>
 </div>
 }

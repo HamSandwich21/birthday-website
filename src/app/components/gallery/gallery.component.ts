@@ -4,16 +4,40 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   selector: 'app-gallery',
   standalone: true,
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css'], // Corrected the property name to styleUrls
+  styleUrls: ['./gallery.component.css'],
 })
 export class GalleryComponent implements OnInit, OnDestroy {
-  constructor() {}
+  private audio: HTMLAudioElement;
+  isMuted: boolean = false;
+
+  constructor() {
+    this.audio = new Audio('assets/gallery-background-music.mp3');
+    this.audio.loop = true;
+  }
 
   ngOnInit() {
-    // Initialization logic goes here (if needed)
+    this.playMusic();
   }
 
   ngOnDestroy() {
-    // Cleanup logic goes here (if needed)
+    this.audio.pause();
+    this.audio.currentTime = 0;
+  }
+
+  playMusic() {
+    if (!this.isMuted) {
+      this.audio.play().catch((error) => {
+        console.log('Failed to play music:', error);
+      });
+    }
+  }
+
+  toggleMute() {
+    this.isMuted = !this.isMuted;
+    if (this.isMuted) {
+      this.audio.pause();
+    } else {
+      this.playMusic();
+    }
   }
 }

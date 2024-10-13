@@ -13,23 +13,47 @@ export class MainPageComponent implements OnInit, OnDestroy {
   seconds: number = 0;
   isBirthday: boolean = false;
   showCountdown: boolean = false;
-  loading: boolean = true;
+  isMuted: boolean = false;
   private countdownInterval: any;
+  private audio: HTMLAudioElement;
 
-  constructor() {}
+  constructor() {
+    this.audio = new Audio('assets/main-background-music.mp3');
+    this.audio.loop = true;
+  }
 
   ngOnInit() {
     this.startCountdown();
+    this.audio.play().catch((error) => {
+      console.log('Autoplay was prevented:', error);
+    });
   }
 
   ngOnDestroy() {
     if (this.countdownInterval) {
       clearInterval(this.countdownInterval);
     }
+    this.audio.pause();
+    this.audio.currentTime = 0;
+  }
+
+  playMusic() {
+    this.audio.play().catch((error) => {
+      console.log('Failed to play music:', error);
+    });
+  }
+
+  toggleMute() {
+    this.isMuted = !this.isMuted;
+    if (this.isMuted) {
+      this.audio.pause();
+    } else {
+      this.playMusic();
+    }
   }
 
   private startCountdown() {
-    const countDownDate = new Date('October 10, 2024 13:20:00').getTime();
+    const countDownDate = new Date('October 13, 2024 02:15:00').getTime();
 
     this.countdownInterval = setInterval(() => {
       const now = new Date().getTime();
@@ -46,9 +70,8 @@ export class MainPageComponent implements OnInit, OnDestroy {
       } else {
         clearInterval(this.countdownInterval);
         this.isBirthday = true;
+        this.playMusic();
       }
-
-      this.loading = false;
     }, 1000);
   }
 }

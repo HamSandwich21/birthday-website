@@ -60,11 +60,7 @@
 }
 
 /* Other styles remain the same */
-.background-image {
-  background-image: url("../../../assets/main-page-background.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100%;
+.positioning {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,4 +116,13 @@
   color: #555;
   font-size: 1rem;
   font-family: "Lobster", cursive;
+}
+
+.mute-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 20;
+  color: white;
 }
