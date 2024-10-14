@@ -53,7 +53,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
   }
 
   private startCountdown() {
-    const countDownDate = new Date('October 13, 2024 02:15:00').getTime();
+    const countDownDate = new Date('October 14, 2024 22:39:00').getTime();
 
     this.countdownInterval = setInterval(() => {
       const now = new Date().getTime();

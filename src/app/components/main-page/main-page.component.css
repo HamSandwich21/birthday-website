@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 70px;
 }
 
 .countdown-container {
@@ -78,14 +77,14 @@
 }
 
 .birthday-message {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #ff2b7f;
   margin-bottom: 10px;
   font-family: "Pacifico", cursive;
 }
 
 .sub-message {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #555;
   font-family: "Lobster", cursive;
 }
