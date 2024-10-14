@@ -12,7 +12,7 @@ export class GalleryComponent implements OnInit, OnDestroy {
 
   constructor() {
     this.audio = new Audio('assets/gallery-background-music.mp3');
-    this.audio.loop = true;
+    this.audio.loop = false;
   }
 
   ngOnInit() {

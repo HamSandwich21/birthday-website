@@ -16,8 +16,9 @@
   position: relative;
   z-index: 0;
   box-sizing: border-box;
-  max-width: 900px;
+  max-width: 700px;
   width: 90%;
+  height: 85%; /* Set a fixed height */
   margin: 30px auto;
   font-family: "Tangerine", cursive;
   font-size: 26px;
@@ -29,7 +30,6 @@
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-
 .marge {
   position: absolute;
   border-left: 1px solid #d88;
@@ -61,4 +61,35 @@
   cursor: pointer;
   z-index: 20;
   color: white;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+.prev-icon,
+.next-icon {
+  font-size: 36px; /* Adjust size as needed */
+  cursor: pointer; /* Change cursor to pointer */
+  color: #c50f0f; /* Color to match your design */
+  transition: color 0.3s;
+}
+
+.prev-icon:hover,
+.next-icon:hover {
+  color: #ff4c4c; /* Darker shade on hover */
+}
+
+.disabled {
+  color: #ccc; /* Light grey for disabled state */
+  cursor: default; /* Show not-allowed cursor */
+}
+
+.disabled:hover {
+  color: #ccc;
 }
