@@ -2,10 +2,7 @@
   <div class="page">
     <div class="marge"></div>
     <span class="title">{{ messages[currentPage].title }}</span>
-    <p>
-      {{ messages[currentPage].content }}
-    </p>
-
+    <p [innerHTML]="messages[currentPage].content"></p>
     <div class="navigation">
       <i
         (click)="previousPage()"
