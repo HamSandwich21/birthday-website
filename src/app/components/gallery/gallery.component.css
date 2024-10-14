@@ -1,42 +1,79 @@
 .gallery-page {
   position: relative;
-  height: 100vh; /* Fill the viewport height */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 20px; /* Add some padding */
+  padding: 20px;
+  margin-top: 70px;
 }
 
 .card-container {
   display: flex;
-  justify-content: center; /* Center the cards */
-  gap: 100px; /* Increased space between cards */
-  margin-bottom: 100px; /* Increased space between rows */
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 100px;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.9); /* Background color for cards */
-  border-radius: 15px; /* Slightly increased rounded corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
-  width: 250px; /* Increased width for each card */
-  height: 300px; /* Increased height for each card */
-  overflow: hidden; /* Ensures the image does not overflow */
-  transition: transform 0.3s; /* Smooth transformation */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Rotate classes */
+.rotate-5 {
+  transform: rotate(5deg);
+}
+.rotate-neg10 {
+  transform: rotate(-10deg);
+}
+.rotate-15 {
+  transform: rotate(15deg);
+}
+.rotate-neg5 {
+  transform: rotate(-5deg);
+}
+.rotate-20 {
+  transform: rotate(20deg);
+}
+.rotate-neg15 {
+  transform: rotate(-15deg);
+}
+.rotate-10 {
+  transform: rotate(10deg);
+}
+.rotate-neg10 {
+  transform: rotate(-10deg);
+}
+
+/* Hover effect */
+.card:hover {
+  transform: scale(1.2) rotate(0deg); /* Scale up and remove tilt */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add a stronger shadow */
 }
 
 .card-image {
-  width: 100%; /* Full width of the card */
-  height: 200px; /* Increased height for images */
-  object-fit: cover; /* Maintain aspect ratio and cover */
+  width: 100%;
+  object-fit: cover;
 }
 
 .card-title {
-  padding: 15px; /* Increased padding for the title */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255); /* Background for readability */
   text-align: center;
-  font-family: "Pacifico", cursive; /* Change font family if needed */
-  font-size: 1.5rem; /* Increased font size for the title */
-  color: #333; /* Card title color */
+  font-family: "Pacifico", cursive;
+  font-size: 1.15rem;
+  color: #333;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .mute-button {
