@@ -1,9 +1,7 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppRoutingModule } from './app/app.routes';
-import { APP_BASE_HREF } from '@angular/common';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component'; // Ensure the correct path
+import { appConfig } from './app/app.config'; // Import your appConfig
 
-platformBrowserDynamic()
-  .bootstrapModule(AppRoutingModule, {
-    providers: [{ provide: APP_BASE_HREF, useValue: '/birthday-website/' }],
-  })
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, appConfig).catch((err) =>
+  console.error(err)
+);
