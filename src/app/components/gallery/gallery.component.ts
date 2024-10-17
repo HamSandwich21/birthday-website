@@ -13,7 +13,7 @@ export class GalleryComponent implements OnInit, OnDestroy {
 
   constructor() {
     this.audio = new Audio('assets/gallery-background-music.mp3');
-    this.image1 = 'assets/Image 1.jpg';
+    this.image1 = '/birthday-website/assets/Image 1.jpg';
     this.audio.loop = false;
   }
 
