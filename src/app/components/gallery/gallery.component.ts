@@ -7,11 +7,13 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./gallery.component.css'],
 })
 export class GalleryComponent implements OnInit, OnDestroy {
+  public image1: string;
   private audio: HTMLAudioElement;
   isMuted: boolean = false;
 
   constructor() {
     this.audio = new Audio('assets/gallery-background-music.mp3');
+    this.image1 = 'assets/Image 1.jpg';
     this.audio.loop = false;
   }
 
