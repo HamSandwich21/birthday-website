@@ -27,10 +27,10 @@
       </svg>
     </button>
     <div class="navbar-menu" id="navbar-default">
-      <ul class="navbar-list">
-        <li><a href="main" class="navbar-link">Home</a></li>
-        <li><a href="gallery" class="navbar-link">Gallery</a></li>
-        <li><a href="message" class="navbar-link">Message</a></li>
+      <ul>
+        <li><a [routerLink]="['/main']">Main</a></li>
+        <li><a [routerLink]="['/message']">Message</a></li>
+        <li><a [routerLink]="['/gallery']">Gallery</a></li>
       </ul>
     </div>
   </div>
