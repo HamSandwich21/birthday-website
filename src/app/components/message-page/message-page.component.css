@@ -2,7 +2,7 @@
 
 .message-page {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
   box-sizing: border-box;
   max-width: 700px;
   width: 90%;
-  height: 85%; /* Set a fixed height */
+  height: 700px; /* Set a fixed height */
   margin: 30px auto;
   font-family: "Tangerine", cursive;
   font-size: 26px;
@@ -92,4 +92,15 @@
 
 .disabled:hover {
   color: #ccc;
+}
+
+@media (max-width: 1366px) {
+  .page p {
+    margin: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.2rem;
+    font-family: "Bradley Hand", cursive;
+    font-size: 16px;
+    line-height: 2rem;
+  }
 }

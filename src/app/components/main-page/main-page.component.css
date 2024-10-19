@@ -1,11 +1,12 @@
 .main-page {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 30px;
 }
 
 .countdown-container {
